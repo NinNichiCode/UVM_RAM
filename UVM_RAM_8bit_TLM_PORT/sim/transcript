@@ -1,0 +1,174 @@
+# do run.do
+# --- Compiling RTL ---
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:11:10 on Dec 15,2025
+# vlog -sv ../tb/ram_if.sv ../ram.v 
+# -- Compiling interface ram_if
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:11:10 on Dec 15,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# --- Compiling UVC Package ---
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:11:10 on Dec 15,2025
+# vlog -sv "+incdir+../uvc/env" "+incdir+../uvc/seq" "+incdir+../uvc/tests" ../uvc/env/ram_pkg.sv 
+# -- Compiling package ram_pkg
+# ** Note: (vlog-2286) ../uvc/env/ram_pkg.sv(2): Using implicit +incdir+D:/questasim_b_install/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# 
+# Top level modules:
+# 	--none--
+# End time: 22:11:15 on Dec 15,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
+# --- Compiling Top Module ---
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 22:11:17 on Dec 15,2025
+# vlog -sv ../tb/top.sv 
+# ** Note: (vlog-2286) ../tb/top.sv(3): Using implicit +incdir+D:/questasim_b_install/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Compiling package top_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package ram_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 22:11:18 on Dec 15,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# --- Compilation successful! ---
+# --- Starting Simulation ---
+# vsim top "+UVM_TESTNAME=ram_test" 
+# Start time: 22:11:26 on Dec 15,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ram_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.ram_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading D:/questasim_b_install/uvm-1.1d\win64\uvm_dpi.dll
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ram_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               ram_test                -     @471 
+#   env                      ram_env                 -     @478 
+#     agent                  ram_agent               -     @485 
+#       driver               ram_driver              -     @508 
+#         rsp_port           uvm_analysis_port       -     @523 
+#         seq_item_port      uvm_seq_item_pull_port  -     @515 
+#       monitor              ram_monitor             -     @531 
+#         item_send_port     uvm_analysis_port       -     @538 
+#       seqr                 uvm_sequencer           -     @546 
+#         rsp_export         uvm_analysis_export     -     @553 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @647 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     scoreboard             ram_scoreboard          -     @492 
+#       item_got_imp         uvm_analysis_imp        -     @499 
+# --------------------------------------------------------------
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 5000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 5000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=0
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 20000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = a5, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(20) @ 25000: uvm_test_top.env.scoreboard [SB] READ before WRITE addr=f dout=0 (ignored)
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 25000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=x
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 40000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = ae, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(20) @ 45000: uvm_test_top.env.scoreboard [SB] READ before WRITE addr=f dout=0 (ignored)
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 45000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=x
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 55000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 65
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 55000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=65
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 60000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 65, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 65000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 65
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 65000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=65
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 80000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 3a, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 85000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 65
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 85000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=65
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 100000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 31, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 105000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 65
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 105000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=65
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 115000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 74
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 115000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=74
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 120000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 74, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 125000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 74
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 125000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=74
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 140000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 13, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 145000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 74
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 145000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=74
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 155000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 8e
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 155000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=8e
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 160000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 8e, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 165000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 8e
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 165000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 175000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 7f
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 175000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=7f
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 180000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 7f, addr = f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 185000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 7f
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 185000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=7f
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 195000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = ee
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 195000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=ee
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 200000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = ee, addr = f
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../uvc/env/../tests/base_test.sv(37) @ 200000: uvm_test_top [BASE_TEST] ** TEST PASSED **
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   46
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [BASE_TEST]     1
+# [DRV]    10
+# [MON]    15
+# [Questa UVM]     2
+# [RNTST]     1
+# [SB]    15
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 200 ns  Iteration: 61  Instance: /top
+# End time: 22:11:54 on Dec 15,2025, Elapsed time: 0:00:28
+# Errors: 0, Warnings: 0
