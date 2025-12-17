@@ -1,0 +1,221 @@
+# vsim -c top "+UVM_TESTNAME=ram_test" -l logs/ram_test.log -do "run -all; quit -f" 
+# Start time: 14:44:04 on Dec 17,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ram_if(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.ram_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading D:/questasim_b_install/uvm-1.1d\win64\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test ram_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------
+# Name                       Type                        Size  Value
+# ------------------------------------------------------------------
+# uvm_test_top               ram_test                    -     @471 
+#   env                      ram_env                     -     @478 
+#     agent                  ram_agent                   -     @485 
+#       driver               ram_driver                  -     @594 
+#         rsp_port           uvm_analysis_port           -     @609 
+#         seq_item_port      uvm_seq_item_pull_port      -     @601 
+#       golden               ram_golden                  -     @632 
+#         item_golden_port   uvm_analysis_port           -     @639 
+#       monitor              ram_monitor                 -     @617 
+#         item_send_port     uvm_analysis_port           -     @624 
+#       seqr                 uvm_sequencer               -     @647 
+#         rsp_export         uvm_analysis_export         -     @654 
+#         seq_item_export    uvm_seq_item_pull_imp       -     @748 
+#         arbitration_queue  array                       0     -    
+#         lock_queue         array                       0     -    
+#         num_last_reqs      integral                    32    'd1  
+#         num_last_rsps      integral                    32    'd1  
+#     scoreboard             ram_scoreboard              -     @492 
+#       item_golden_imp      uvm_tlm_analysis_fifo #(T)  -     @546 
+#         analysis_export    uvm_analysis_imp            -     @585 
+#         get_ap             uvm_analysis_port           -     @577 
+#         get_peek_export    uvm_get_peek_imp            -     @561 
+#         put_ap             uvm_analysis_port           -     @569 
+#         put_export         uvm_put_imp                 -     @553 
+#       item_got_imp         uvm_tlm_analysis_fifo #(T)  -     @499 
+#         analysis_export    uvm_analysis_imp            -     @538 
+#         get_ap             uvm_analysis_port           -     @530 
+#         get_peek_export    uvm_get_peek_imp            -     @514 
+#         put_ap             uvm_analysis_port           -     @522 
+#         put_export         uvm_put_imp                 -     @506 
+# ------------------------------------------------------------------
+# 
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 5001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 5001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 5001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 0, addr = 0, dout = x
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 5001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = 0, din = 0, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 5001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = 0, din_gol = 0, dout_gol = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 15001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = a5, addr = f, dout = x
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 15001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 15001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 15001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = a5, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 15001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = a5, dout_gol = 0
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 20000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = a5, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 25001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 25001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 25001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = a5, addr = f, dout = x
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 25001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = a5, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 25001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = a5, dout_gol = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 35001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = ae, addr = f, dout = x
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 35001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 35001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 35001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = ae, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 35001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = ae, dout_gol = 0
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 40000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = ae, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 45001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 45001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 45001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = ae, addr = f, dout = x
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 45001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = ae, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 45001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = ae, dout_gol = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 55001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 65, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 55001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = ae
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 55001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 55001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 65, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 55001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 65, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 60000: uvm_test_top.env.agent.driver [DRV] wr = 0, din = 65, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 65001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = ae
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 65001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = ae
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 65001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 65, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 65001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 65, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 65001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 65, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 75001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 3a, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 75001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 75001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 75001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 3a, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 75001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 3a, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 80000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = 3a, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 85001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 85001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 85001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 3a, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 85001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 3a, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 85001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 3a, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 95001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 31, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 95001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 95001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 95001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 31, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 95001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 31, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 100000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = 31, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 105001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 105001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 105001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 31, addr = f, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 105001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 31, dout = ae
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 105001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 31, dout_gol = ae
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 115001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 74, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 115001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = 31
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 115001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 115001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 74, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 115001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 74, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 120000: uvm_test_top.env.agent.driver [DRV] wr = 0, din = 74, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 125001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = 31
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 125001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = 31
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 125001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 74, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 125001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 74, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 125001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 74, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 135001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 13, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 135001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 135001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 135001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 13, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 135001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 13, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 140000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = 13, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 145001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 145001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 145001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 13, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 145001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 13, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 145001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 13, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 155001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 8e, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 155001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 155001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 155001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 8e, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 155001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 8e, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 160000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = 8e, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 165001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 165001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 165001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = 8e, addr = f, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 165001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = 8e, dout = 31
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 165001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = 8e, dout_gol = 31
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 175001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 7f, addr = f, dout = 8e
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 175001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = 8e
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 175001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = 8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 175001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 7f, dout = 8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 175001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 7f, dout_gol = 8e
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 180000: uvm_test_top.env.agent.driver [DRV] wr = 0, din = 7f, addr = f
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 185001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 0, dout = 8e
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 185001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 0, dout = 8e
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 185001: uvm_test_top.env.agent.monitor [MON] wr = 0, din = 7f, addr = f, dout = 8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 185001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 0, addr = f, din = 7f, dout = 8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 185001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 0, addr_gol = f, din_gol = 7f, dout_gol = 8e
+# UVM_INFO ../uvc/env/./ram_monitor.sv(38) @ 195001: uvm_test_top.env.agent.monitor [MON] wr = 1, din = ee, addr = f, dout = 8e
+# UVM_INFO ../uvc/env/./ram_golden.sv(46) @ 195001: uvm_test_top.env.agent.golden [GOLDEN_1] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_golden.sv(49) @ 195001: uvm_test_top.env.agent.golden [GOLDEN_2] wr = 1, dout = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(33) @ 195001: uvm_test_top.env.scoreboard [SB] PASSED , wr = 1, addr = f, din = ee, dout = 8e
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(35) @ 195001: uvm_test_top.env.scoreboard [SB_gol] PASSED , wr_gol = 1, addr_gol = f, din_gol = ee, dout_gol = 8e
+# UVM_INFO ../uvc/env/./ram_driver.sv(30) @ 200000: uvm_test_top.env.agent.driver [DRV] wr = 1, din = ee, addr = f
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../uvc/seq/../tests/base_test.sv(37) @ 200000: uvm_test_top [BASE_TEST] ** TEST PASSED **
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  116
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [BASE_TEST]     1
+# [DRV]    10
+# [GOLDEN_1]    20
+# [GOLDEN_2]    20
+# [MON]    20
+# [Questa UVM]     2
+# [RNTST]     1
+# [SB]    20
+# [SB_gol]    20
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 200 ns  Iteration: 61  Instance: /top
+# End time: 14:44:09 on Dec 17,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
