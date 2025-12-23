@@ -1,6 +1,6 @@
 # vsim -c top "+UVM_TESTNAME=ram_test" -l logs/ram_test.log -do "run -all; quit -f" 
-# Start time: 14:10:24 on Dec 17,2025
-# ** Note: (vsim-3812) Design is being optimized...
+# Start time: 10:31:33 on Dec 20,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -70,66 +70,208 @@
 #       item_got_imp         uvm_analysis_imp        -     @499 
 # --------------------------------------------------------------
 # 
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 5000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 5000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 5000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 0
 # UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 5000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=0
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 20000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = a5, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(20) @ 25000: uvm_test_top.env.scoreboard [SB] READ before WRITE addr=f dout=0 (ignored)
-# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 25000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=x
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 40000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = ae, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(20) @ 45000: uvm_test_top.env.scoreboard [SB] READ before WRITE addr=f dout=0 (ignored)
-# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 45000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=x
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 55000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 65
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 55000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=65
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 60000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 65, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 65000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 65
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 65000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=65
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 80000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 3a, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 85000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 65
-# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 85000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=65
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 100000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 31, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 105000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 65
-# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 105000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=65
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 115000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 74
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 115000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=74
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 120000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 74, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 125000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 74
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 125000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=74
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 140000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 13, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(27) @ 145000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = f, din = 0, dout = 74
-# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 145000: uvm_test_top.env.agent.monitor [MON] READ addr=f dout=74
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 155000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 8e
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 155000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=8e
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 160000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 8e, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 165000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 8e
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 165000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=8e
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 175000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 7f
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 175000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=7f
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 180000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 7f, addr = f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 185000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = 7f
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 185000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=7f
-# UVM_INFO ../uvc/env/./ram_scoreboard.sv(16) @ 195000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = f, din = ee
-# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 195000: uvm_test_top.env.agent.monitor [MON] WRITE addr=f din=ee
-# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 200000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = ee, addr = f
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 200000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# UVM_INFO ../uvc/seq/../tests/base_test.sv(37) @ 200000: uvm_test_top [BASE_TEST] ** TEST PASSED **
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 15000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 15000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 40
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 15000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=40
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 20000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 40, addr = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 25000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 25000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 40
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 25000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=40
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 40000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = c7, addr = 0
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 40000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 45000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 45000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 0, din = 0, dout = 40
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 45000: uvm_test_top.env.agent.monitor [MON] READ addr=0 dout=40
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 55000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 55000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 24
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 55000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=24
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 60000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 24, addr = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 65000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 65000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 24
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 65000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=24
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 80000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 2e, addr = 0
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 80000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 85000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 85000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 0, din = 0, dout = 24
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 85000: uvm_test_top.env.agent.monitor [MON] READ addr=0 dout=24
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 95000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 95000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 95000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=f1
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 100000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = f1, addr = 8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 105000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 105000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 105000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=f1
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 120000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 9a, addr = 8
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 120000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 125000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 125000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 8, din = 0, dout = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 125000: uvm_test_top.env.agent.monitor [MON] READ addr=8 dout=f1
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 135000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 135000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = 84
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 135000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=84
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 140000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 84, addr = c
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 145000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 145000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = 84
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 145000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=84
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 160000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 5a, addr = c
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 160000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0xc
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 165000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 165000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = c, din = 0, dout = 84
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 165000: uvm_test_top.env.agent.monitor [MON] READ addr=c dout=84
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 175000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 175000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = 54
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 175000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=54
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 180000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = 54, addr = 8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 185000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 185000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = 54
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 185000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=54
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 200000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 8a, addr = 8
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 200000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 205000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 205000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 8, din = 0, dout = 54
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 205000: uvm_test_top.env.agent.monitor [MON] READ addr=8 dout=54
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 215000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 215000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 215000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=f1
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 220000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = f1, addr = 0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 225000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 225000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 225000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=f1
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 240000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = f5, addr = 0
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 240000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x0
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 245000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 245000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 0, din = 0, dout = f1
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 245000: uvm_test_top.env.agent.monitor [MON] READ addr=0 dout=f1
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 255000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 255000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = a2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 255000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=a2
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 260000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = a2, addr = 8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 265000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 265000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 8, din = a2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 265000: uvm_test_top.env.agent.monitor [MON] WRITE addr=8 din=a2
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 280000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = bf, addr = 8
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 280000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x8
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 285000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 285000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = 8, din = 0, dout = a2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 285000: uvm_test_top.env.agent.monitor [MON] READ addr=8 dout=a2
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 295000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 295000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = d2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 295000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=d2
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 300000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = d2, addr = c
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 305000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 305000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = d2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 305000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=d2
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 320000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 67, addr = c
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 320000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0xc
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 325000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 325000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = c, din = 0, dout = d2
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 325000: uvm_test_top.env.agent.monitor [MON] READ addr=c dout=d2
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 335000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 335000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = f9
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 335000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=f9
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 340000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = f9, addr = c
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 345000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 345000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = c, din = f9
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 345000: uvm_test_top.env.agent.monitor [MON] WRITE addr=c din=f9
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 360000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 1b, addr = c
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 360000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0xc
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 365000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(29) @ 365000: uvm_test_top.env.scoreboard [SB] PASSED , kind = READ, addr = c, din = 0, dout = f9
+# UVM_INFO ../uvc/env/./ram_monitor.sv(54) @ 365000: uvm_test_top.env.agent.monitor [MON] READ addr=c dout=f9
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 375000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 375000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 4, din = e7
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 375000: uvm_test_top.env.agent.monitor [MON] WRITE addr=4 din=e7
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 380000: uvm_test_top.env.agent.driver [DRV] wr = WRITE, din = e7, addr = 4
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 385000: uvm_test_top.env.scoreboard [RAM_SEQ] 
+# ====================  ====================
+# 
+# UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 385000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 4, din = e7
+# UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 385000: uvm_test_top.env.agent.monitor [MON] WRITE addr=4 din=e7
+# UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 400000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = 0, addr = 4
+# UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 400000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x4
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 400000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO ../uvc/seq/../tests/base_test.sv(37) @ 400000: uvm_test_top [BASE_TEST] ** TEST PASSED **
 # 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :   46
+# UVM_INFO :  126
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
 # ** Report counts by id
 # [BASE_TEST]     1
-# [DRV]    10
-# [MON]    15
+# [DRV]    20
+# [MON]    30
 # [Questa UVM]     2
+# [RAM_SEQ]    30
 # [RNTST]     1
-# [SB]    15
+# [SB]    30
 # [TEST_DONE]     1
 # [UVMTOP]     1
+# [ram_seq]    10
 # ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 200 ns  Iteration: 61  Instance: /top
-# End time: 14:10:30 on Dec 17,2025, Elapsed time: 0:00:06
+#    Time: 400 ns  Iteration: 61  Instance: /top
+# End time: 10:31:36 on Dec 20,2025, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0

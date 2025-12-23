@@ -22,23 +22,34 @@ class ram_monitor extends uvm_monitor;
 	  `uvm_fatal("MON", "cannot_access_interface");
    endfunction
 
-   virtual task run_phase(uvm_phase phase);
-      forever begin
-       trans = ram_item::type_id::create("trans", this);
-      @(posedge vif.clk);
-         #1;
- 
-	 trans.wr = vif.wr;
-	 trans.addr = vif.addr;
-	 trans.din = vif.din;
-         trans.dout = vif.dout;
-      
-         item_send_port.write(trans);
-   
-   `uvm_info("MON", $sformatf("wr = %0h, din = %0h, addr = %0h, dout = %0h", vif.wr, vif.din, vif.addr, vif.dout), UVM_LOW) 
-   end
+virtual task run_phase(uvm_phase phase);
+  forever begin
+    
 
-   endtask
+    trans = ram_item::type_id::create("trans", this);
+    @(vif.mon_cb);
+    trans.wr   = vif.mon_cb.wr;
+    trans.addr = vif.mon_cb.addr;
+    trans.din  = vif.mon_cb.din;
+
+    if (vif.mon_cb.wr == 0) begin
+      // READ: dout valid after 1 cycle
+      @(vif.mon_cb);
+      trans.dout = vif.mon_cb.dout;
+    end
+    // else begin
+    //   // WRITE: dout not relevant
+    //   trans.dout = '0;
+    // end
+
+    item_send_port.write(trans);
+
+    `uvm_info("MON",
+      $sformatf("wr=%0h din=%0h addr=%0h dout=%0h",
+        trans.wr, trans.din, trans.addr, trans.dout),
+      UVM_LOW)
+  end
+endtask
 
 endclass
 

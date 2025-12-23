@@ -1,5 +1,9 @@
 class ram_item extends uvm_sequence_item;
 
+  // typedef enum {READ, WRITE} ram_op_e;
+
+  // rand ram_op_e kind;
+
   rand bit wr;
   rand bit [7:0] din;
   rand bit [3:0] addr;
@@ -13,7 +17,7 @@ class ram_item extends uvm_sequence_item;
      `uvm_field_int(wr, UVM_DEFAULT)
      `uvm_field_int(addr, UVM_DEFAULT)
      `uvm_field_int(din, UVM_DEFAULT)
-     `uvm_field_int(dout, UVM_DEFAULT)
+     `uvm_field_int(dout, UVM_DEFAULT | UVM_NOCOMPARE) 
    `uvm_object_utils_end
 
 endclass

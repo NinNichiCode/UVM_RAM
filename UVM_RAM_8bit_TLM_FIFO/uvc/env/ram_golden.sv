@@ -3,7 +3,7 @@ class ram_golden extends uvm_monitor;
 
 
    uvm_analysis_port#(ram_item) item_golden_port;
-   reg [7:0] mem [15:0];
+   reg [7:0] mem [int];
 
    function new(string name = "", uvm_component parent = null);
      super.new(name, parent);
@@ -23,27 +23,36 @@ class ram_golden extends uvm_monitor;
 	  `uvm_fatal("MON", "cannot_access_interface");
    endfunction
 
-   function void predict();
+   // function void predict();
+   //    if(trans.wr) begin
+	//    mem[trans.addr] = trans.din;
+   //    end else begin
+	//    trans.dout = mem[trans.addr];
+   //    end
+   // endfunction
+
+   task predict();
       if(trans.wr) begin
 	   mem[trans.addr] = trans.din;
       end else begin
+      // @(posedge vif.clk);
+         //  @(vif.mon_cb);
 	   trans.dout = mem[trans.addr];
       end
-   endfunction
+   endtask
+
 
    virtual task run_phase(uvm_phase phase);
       forever begin
         trans = ram_item::type_id::create("trans",this);
-      @(posedge vif.clk);
-         #1;
+      @(vif.mon_cb);
+         // #1;
  
 	 trans.wr = vif.wr;
 	 trans.addr = vif.addr;
 	 trans.din = vif.din;
         
          predict();
-
-   `uvm_info("GOLDEN_1", $sformatf("wr = %0h, dout = %0h", trans.wr, trans.dout), UVM_LOW) 
          item_golden_port.write(trans);
    
    `uvm_info("GOLDEN_2", $sformatf("wr = %0h, dout = %0h", trans.wr, trans.dout), UVM_LOW) 

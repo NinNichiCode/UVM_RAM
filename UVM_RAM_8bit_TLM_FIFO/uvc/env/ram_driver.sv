@@ -17,14 +17,14 @@ class ram_driver extends uvm_driver#(ram_item);
 
    virtual task run_phase(uvm_phase phase);
       forever begin
-          @(negedge vif.clk);
+          @(vif.drv_cb);
           
        seq_item_port.get_next_item(trans);
-          vif.wr <= trans.wr;
-	  vif.din <= trans.din;
-	  vif.addr <= trans.addr;
+          vif.drv_cb.wr <= trans.wr;
+	  vif.drv_cb.din <= trans.din;
+	  vif.drv_cb.addr <= trans.addr;
 
-	  @(negedge vif.clk);
+	
        seq_item_port.item_done();
    
    `uvm_info("DRV", $sformatf("wr = %0h, din = %0h, addr = %0h", trans.wr, trans.din, trans.addr), UVM_LOW) 

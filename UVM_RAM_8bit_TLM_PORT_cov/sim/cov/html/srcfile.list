@@ -1,0 +1,11 @@
+..//ram.v
+../tb/ram_if.sv
+../tb/top.sv
+../uvc/env/./ram_coverage.sv
+../uvc/env/./ram_driver.sv
+../uvc/env/./ram_monitor.sv
+../uvc/env/./ram_scoreboard.sv
+../uvc/env/ram_pkg.sv
+../uvc/seq/../seq/ram_item.sv
+../uvc/seq/../seq/ram_seq.sv
+../uvc/seq/../tests/base_test.sv
