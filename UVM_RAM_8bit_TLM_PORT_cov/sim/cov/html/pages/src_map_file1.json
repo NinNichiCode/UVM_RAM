@@ -1,12 +1,6 @@
 var g_data = {'dummy':null,
 '2':'..//ram.v',
-'11':'../tb/ram_if.sv',
+'5':'../tb/ram_if.sv',
 '1':'../tb/top.sv',
-'7':'../uvc/env/./ram_coverage.sv',
-'4':'../uvc/env/./ram_driver.sv',
-'5':'../uvc/env/./ram_monitor.sv',
-'6':'../uvc/env/./ram_scoreboard.sv',
-'10':'../uvc/env/ram_pkg.sv',
-'3':'../uvc/seq/../seq/ram_item.sv',
-'8':'../uvc/seq/../seq/ram_seq.sv',
-'9':'../uvc/seq/../tests/base_test.sv'};
+'3':'../uvc/env/./ram_coverage.sv',
+'4':'../uvc/env/ram_pkg.sv'};

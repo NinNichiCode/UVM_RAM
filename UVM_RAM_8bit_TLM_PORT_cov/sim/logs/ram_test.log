@@ -1,5 +1,5 @@
-# vsim -c -coverage top "+UVM_TESTNAME=ram_test" -voptargs="+acc" -l logs/ram_test.log -do "coverage save -onexit cov/ram_test.ucdb; run -all; quit" 
-# Start time: 08:45:08 on Dec 22,2025
+# vsim -c -coverage top "+UVM_TESTNAME=ram_test" -voptargs="+acc" -assertdebug -l logs/ram_test.log -do "coverage save -onexit cov/ram_test.ucdb; run -all; quit" 
+# Start time: 18:34:50 on Dec 25,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
@@ -91,6 +91,8 @@
 # 
 # UVM_INFO ../uvc/env/./ram_scoreboard.sv(18) @ 25000: uvm_test_top.env.scoreboard [SB] kind = WRITE, addr = 0, din = 40
 # UVM_INFO ../uvc/env/./ram_monitor.sv(39) @ 25000: uvm_test_top.env.agent.monitor [MON] WRITE addr=0 din=40
+# ** Warning: SVA: Read value is X at time 35000
+#    Time: 35 ns Started: 35 ns  Scope: top.vif.ASSERT_NO_X_READ File: ../tb/ram_if.sv Line: 41 Expr: ~$isunknown(dout)
 # UVM_INFO ../uvc/env/./ram_driver.sv(32) @ 40000: uvm_test_top.env.agent.driver [DRV] wr = READ, din = c7, addr = 0
 # UVM_INFO ../uvc/seq/../seq/ram_seq.sv(34) @ 40000: uvm_test_top.env.agent.seqr@@seq [ram_seq] WRITE then READ at addr = 0x0
 # UVM_INFO ../uvc/env/./ram_scoreboard.sv(14) @ 45000: uvm_test_top.env.scoreboard [RAM_SEQ] 
@@ -2380,5 +2382,5 @@
 # ** Note: $finish    : D:/questasim_b_install/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
 #    Time: 5120 ns  Iteration: 61  Instance: /top
 # Saving coverage database on exit...
-# End time: 08:45:14 on Dec 22,2025, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 0
+# End time: 18:34:58 on Dec 25,2025, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 1
